@@ -49,7 +49,7 @@ const NavBar = () => {
       <div className="container flex items-center justify-between h-16 px-4 md:px-6">
         <a href="#" className="flex items-center space-x-2">
           <span className="text-xl font-bold bg-gradient-to-r from-crypto-purple to-crypto-blue bg-clip-text text-transparent">
-            Web3 Portfolio
+            Maxwell Bruno
           </span>
         </a>
 

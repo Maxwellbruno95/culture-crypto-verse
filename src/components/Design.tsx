@@ -33,6 +33,11 @@ const Design = () => {
       image: "/lovable-uploads/b3e4ba6e-f6a5-4df1-94d2-af12b5a28301.png",
       category: "Marketing Material",
     },
+    {
+      title: "Blockchain Infographic",
+      image: "/lovable-uploads/bd0997c2-16d0-4763-91c2-9c62d398628a.png",
+      category: "Educational Content",
+    },
   ];
 
   return (

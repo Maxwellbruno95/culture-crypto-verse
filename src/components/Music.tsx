@@ -7,23 +7,23 @@ import { Calendar, Music as MusicIcon, PlayCircle, Award } from "lucide-react";
 const Music = () => {
   const musicTracks = [
     {
-      title: "Web3 Education Anthem",
-      description: "A musical journey explaining blockchain basics",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual embed URL
+      title: "Satoshi Nakamoto",
+      description: "A tribute to the creator of Bitcoin and blockchain technology",
+      embedUrl: "https://www.youtube.com/embed/O_GaMqCBWzU",
       coverImage: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWN8ZW58MHx8MHx8fDA%3D",
       year: "2023",
     },
     {
-      title: "Crypto Culture",
-      description: "Celebrating the intersection of traditional culture and blockchain technology",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual embed URL
+      title: "Unstoppable",
+      description: "The resilience and unstoppable nature of blockchain technology",
+      embedUrl: "https://www.youtube.com/embed/ilc9LrYVOrI",
       coverImage: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG11c2ljfGVufDB8fDB8fHww",
       year: "2022",
     },
     {
-      title: "NFT Revolution",
-      description: "The sound of digital ownership and creative freedom",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual embed URL
+      title: "SNUSCOIN",
+      description: "Exploring digital currencies and their potential impact on global economics",
+      embedUrl: "https://www.youtube.com/embed/CRU3uUu3tXA",
       coverImage: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bXVzaWN8ZW58MHx8MHx8fDA%3D",
       year: "2021",
     },
@@ -91,8 +91,10 @@ const Music = () => {
                     </div>
                   </div>
                   <div className="flex items-center">
-                    <PlayCircle className="h-10 w-10 text-crypto-purple mr-3" />
-                    <span className="text-sm text-muted-foreground">Click to play full track</span>
+                    <a href={track.embedUrl} target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-crypto-purple transition-colors">
+                      <PlayCircle className="h-10 w-10 text-crypto-purple mr-3" />
+                      <span className="text-sm text-muted-foreground">Click to play full track</span>
+                    </a>
                   </div>
                 </div>
               </div>

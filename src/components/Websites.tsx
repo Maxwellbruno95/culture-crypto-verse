@@ -9,23 +9,16 @@ const Websites = () => {
     {
       title: "MA-3.fun",
       description: "A platform celebrating Kenyan Matatu culture through NFTs and blockchain technology.",
-      image: "https://images.unsplash.com/photo-1642351202898-db81b11fec6e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8a2VueWF8ZW58MHx8MHx8fDA%3D",
+      image: "/lovable-uploads/7f59d5f0-5cfd-4e91-a2d6-312976611857.png",
       url: "https://ma-3.fun",
       status: "Live",
     },
     {
       title: "AbstractchainAI.com",
       description: "Exploring the intersection of blockchain, artificial intelligence, and abstract art.",
-      image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWJzdHJhY3QlMjBhaXxlbnwwfHwwfHx8MA%3D%3D",
+      image: "/lovable-uploads/cc4d1092-00b5-4f5a-ade1-69f8b1581bcc.png",
       url: "https://abstractchainai.com",
       status: "Live",
-    },
-    {
-      title: "Superchain AI x Blockchain",
-      description: "Upcoming project connecting AI capabilities with blockchain verification and transparency.",
-      image: "https://images.unsplash.com/photo-1642751227050-feb02d648136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxvY2tjaGFpbiUyMGFpfGVufDB8fDB8fHww",
-      url: "#",
-      status: "Coming Soon",
     },
   ];
 
@@ -38,7 +31,7 @@ const Websites = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {websites.map((website, index) => (
           <Card key={index} className="card-hover overflow-hidden flex flex-col">
             <div className="aspect-video relative">
