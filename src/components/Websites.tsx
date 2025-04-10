@@ -9,14 +9,14 @@ const Websites = () => {
     {
       title: "MA-3.fun",
       description: "A platform celebrating Kenyan Matatu culture through NFTs and blockchain technology.",
-      image: "/lovable-uploads/7f59d5f0-5cfd-4e91-a2d6-312976611857.png",
+      image: "/lovable-uploads/da36598e-34de-43ff-9a4c-7964a8dd1a63.png",
       url: "https://ma-3.fun",
       status: "Live",
     },
     {
       title: "AbstractchainAI.com",
       description: "Exploring the intersection of blockchain, artificial intelligence, and abstract art.",
-      image: "/lovable-uploads/cc4d1092-00b5-4f5a-ade1-69f8b1581bcc.png",
+      image: "/lovable-uploads/9c3e4660-503d-466a-a8a5-548195e5c19c.png",
       url: "https://abstractchainai.com",
       status: "Live",
     },
@@ -64,6 +64,10 @@ const Websites = () => {
                 variant="outline"
                 className="w-full"
                 disabled={website.status !== "Live"}
+                as="a" 
+                href={website.url}
+                target="_blank" 
+                rel="noopener noreferrer"
               >
                 <ExternalLink className="h-4 w-4 mr-2" />
                 Visit Website
