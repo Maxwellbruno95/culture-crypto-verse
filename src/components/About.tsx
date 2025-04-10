@@ -42,9 +42,12 @@ const About = () => {
         
         <div className="relative">
           <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-crypto-purple via-crypto-blue to-crypto-teal blur-sm"></div>
-          <div className="relative aspect-square rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
-            {/* Profile image placeholder - replace with actual image if available */}
-            <div className="text-6xl font-bold gradient-text">WEB3</div>
+          <div className="relative aspect-square rounded-lg overflow-hidden">
+            <img 
+              src="/lovable-uploads/13f5adf7-73a7-48fd-8d87-a4f55692f5bf.png" 
+              alt="Maxwell Bruno profile" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
