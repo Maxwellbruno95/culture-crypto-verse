@@ -60,18 +60,31 @@ const Websites = () => {
               <p className="text-muted-foreground">{website.description}</p>
             </CardContent>
             <CardFooter>
-              <Button 
-                variant="outline"
-                className="w-full"
-                disabled={website.status !== "Live"}
-                as="a" 
-                href={website.url}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Visit Website
-              </Button>
+              {website.status === "Live" ? (
+                <a 
+                  href={website.url}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button 
+                    variant="outline"
+                    className="w-full"
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    Visit Website
+                  </Button>
+                </a>
+              ) : (
+                <Button 
+                  variant="outline"
+                  className="w-full"
+                  disabled
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Coming Soon
+                </Button>
+              )}
             </CardFooter>
           </Card>
         ))}
