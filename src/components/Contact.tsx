@@ -8,7 +8,7 @@ import {
   Send, 
   Youtube, 
   ExternalLink, 
-  Telegram 
+  MessageSquare 
 } from "lucide-react";
 
 const Contact = () => {
@@ -25,7 +25,7 @@ const Contact = () => {
     },
     {
       platform: "Telegram",
-      icon: <Telegram className="h-6 w-6" />,
+      icon: <MessageSquare className="h-6 w-6" />,
       url: "https://t.me/web3educator",
     },
     {

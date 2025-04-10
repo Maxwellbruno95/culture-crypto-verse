@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, X, Mail, Twitter, Instagram, Telegram } from "lucide-react";
+import { MessageSquare, X, Mail, Twitter, Instagram } from "lucide-react";
 
 const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const FloatingContact = () => {
       url: "https://instagram.com/web3educator",
     },
     {
-      icon: <Telegram className="h-5 w-5" />,
+      icon: <MessageSquare className="h-5 w-5" />,
       label: "Telegram",
       url: "https://t.me/web3educator",
     },
