@@ -7,40 +7,40 @@ import { Mic, Video, Radio, ExternalLink } from "lucide-react";
 const Interviews = () => {
   const features = [
     {
-      title: "Blockchain Africa Conference",
-      description: "Discussion on the integration of traditional African art forms with blockchain technology",
-      date: "February 2023",
+      title: "MusicNFTs with Unstoppable Domains",
+      description: "Discussion on MusicNFTs during UD Fam Spotlight on X spaces",
+      date: "2023",
       platform: "YouTube",
       type: "Video",
       icon: <Video className="h-6 w-6 text-crypto-purple" />,
-      url: "#",
+      url: "https://youtu.be/k19dyaX_PsU?si=3CKk58-hrQZjgwE1",
     },
     {
-      title: "Web3 Daily Podcast",
-      description: "Interview about building crypto communities in emerging markets",
-      date: "November 2022",
+      title: "African Artists Showcase",
+      description: "African Blockchain Week Virtual Summit 2021 (Morocco)",
+      date: "2021",
+      platform: "YouTube",
+      type: "Video",
+      icon: <Video className="h-6 w-6 text-crypto-purple" />,
+      url: "https://youtu.be/JK1vV4F3nZQ?si=lcd9J0GKRffDRaWC",
+    },
+    {
+      title: "Metaverse Soundcheck Podcast",
+      description: "Personal insights about early interaction with blockchain-based music distribution from Nairobi, Kenya",
+      date: "2022",
       platform: "Spotify",
       type: "Podcast",
       icon: <Mic className="h-6 w-6 text-crypto-purple" />,
-      url: "#",
+      url: "https://open.spotify.com/episode/0XvgxrlrzLanFc2Nuu4AGt?si=oO4P8S90T2u_ntwm42gTmw",
     },
     {
-      title: "NFT Culture Radio",
-      description: "Guest feature exploring the intersection of culture and technology in the NFT space",
-      date: "October 2022",
-      platform: "Apple Podcasts",
-      type: "Radio",
+      title: "Rarebirdshq Interview",
+      description: "Creating Content on the Blockchain with Maxwell Bruno from Kenya",
+      date: "February 2022",
+      platform: "Website",
+      type: "Article",
       icon: <Radio className="h-6 w-6 text-crypto-purple" />,
-      url: "#",
-    },
-    {
-      title: "Crypto Kenya TV",
-      description: "Panel discussion on opportunities and challenges for blockchain adoption in East Africa",
-      date: "August 2022",
-      platform: "Television",
-      type: "TV",
-      icon: <Video className="h-6 w-6 text-crypto-purple" />,
-      url: "#",
+      url: "https://rarebirdshq.com/2022/02/04/creating-content-on-the-blockchain-with-maxwell-bruno-from-kenya/?lang=hi",
     },
   ];
 
@@ -70,7 +70,7 @@ const Interviews = () => {
               </div>
             </CardContent>
             <CardFooter>
-              <a href={feature.url} className="w-full">
+              <a href={feature.url} target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button variant="outline" className="w-full group">
                   Watch/Listen
                   <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

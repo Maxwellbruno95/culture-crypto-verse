@@ -25,7 +25,6 @@ const Index = () => {
         <Hero />
         <About />
         <Journey />
-        <Projects />
         <Design />
         <Music />
         <Translation />
@@ -35,6 +34,7 @@ const Index = () => {
         <Reviews />
         <Tweets />
         <Websites />
+        <Projects />
         <Contact />
       </main>
       <Footer />
