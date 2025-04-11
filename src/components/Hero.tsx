@@ -14,8 +14,7 @@ const Hero = () => {
       
       <div className="max-w-3xl space-y-6 animate-fade-in">
         <h1 className="text-5xl md:text-6xl font-bold tracking-tighter">
-          <span className="gradient-text">Blockchain</span> Culture &{" "}
-          <span className="gradient-text">Community</span>
+          <span className="gradient-text">Maxwell</span> Bruno
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground">
           8+ years cultivating a diverse career in the crypto and Web3 space as a community manager, 

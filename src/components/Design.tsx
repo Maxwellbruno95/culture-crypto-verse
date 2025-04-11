@@ -34,8 +34,8 @@ const Design = () => {
       category: "Marketing Material",
     },
     {
-      title: "Blockchain Infographic",
-      image: "/lovable-uploads/bd0997c2-16d0-4763-91c2-9c62d398628a.png",
+      title: "History of Economic Bubbles",
+      image: "/lovable-uploads/a768513d-8f85-450c-8bf6-9e2eb39fdb7b.png",
       category: "Educational Content",
     },
   ];

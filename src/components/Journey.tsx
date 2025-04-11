@@ -6,7 +6,8 @@ import {
   Calendar, 
   Users, 
   Globe, 
-  Music
+  Music,
+  BookOpen
 } from "lucide-react";
 
 const Journey = () => {
@@ -18,16 +19,22 @@ const Journey = () => {
       icon: <Bitcoin className="h-8 w-8 text-crypto-purple" />,
     },
     {
+      year: "2017",
+      title: "Writing and Blogging",
+      description: "Started writing and blogging about Blockchain and Cryptocurrency technologies.",
+      icon: <BookOpen className="h-8 w-8 text-crypto-purple" />,
+    },
+    {
       year: "2018",
-      title: "Gaming NFTs",
-      description: "Started collecting gaming NFTs, exploring the intersection of blockchain and virtual assets.",
-      icon: <Gamepad2 className="h-8 w-8 text-crypto-purple" />,
+      title: "Music & Gaming NFTs",
+      description: "Releasing music on the blockchain and collecting gaming NFTs, exploring the intersection of art and technology.",
+      icon: <Music className="h-8 w-8 text-crypto-purple" />,
     },
     {
       year: "2020",
-      title: "MA-3 Token Launch",
-      description: "Created the MA-3 token to preserve and showcase Kenyan Matatu culture on the blockchain.",
-      icon: <Globe className="h-8 w-8 text-crypto-purple" />,
+      title: "Minting Original NFTs",
+      description: "Created original NFT collections, bringing unique digital art to the blockchain ecosystem.",
+      icon: <Gamepad2 className="h-8 w-8 text-crypto-purple" />,
     },
     {
       year: "2021",
@@ -36,15 +43,15 @@ const Journey = () => {
       icon: <Users className="h-8 w-8 text-crypto-purple" />,
     },
     {
-      year: "2022",
-      title: "Web3 Edutainment",
-      description: "Started Web3 Edutainment initiative, bridging education and entertainment in the blockchain space.",
-      icon: <Music className="h-8 w-8 text-crypto-purple" />,
+      year: "2023",
+      title: "MA-3 BRC20 Token",
+      description: "Launched the MA-3 BRC20 token to preserve and showcase Kenyan Matatu culture on the blockchain.",
+      icon: <Globe className="h-8 w-8 text-crypto-purple" />,
     },
     {
-      year: "2023",
-      title: "Global Speaking Engagements",
-      description: "Presented at African Blockchain Week, AIBC, and NFT AI Summit.",
+      year: "2024",
+      title: "Web3 Edutainment",
+      description: "Started Web3 Edutainment initiative, bridging education and entertainment in the blockchain space.",
       icon: <Calendar className="h-8 w-8 text-crypto-purple" />,
     },
   ];
