@@ -57,7 +57,6 @@ const Contact = () => {
       <div className="max-w-3xl mx-auto text-center space-y-8">
         <h2 className="text-4xl font-bold text-white">Let's Connect</h2>
         <p className="text-xl text-slate-300">
-          OUL Estates is mainly focused on empowering artists, musicians, developers, builders, innovators and sustainable living.
           Reach out through any of these platforms.
         </p>
 
@@ -96,3 +95,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
