@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -24,9 +25,11 @@ const Hero = () => {
           <Button size="lg" className="bg-crypto-purple hover:bg-crypto-darkpurple">
             View Portfolio
           </Button>
-          <Button size="lg" variant="outline" as="a" href="/contact">
-            Contact Me
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" variant="outline">
+              Contact Me
+            </Button>
+          </Link>
         </div>
       </div>
       
