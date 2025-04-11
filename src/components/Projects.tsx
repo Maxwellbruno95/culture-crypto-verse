@@ -26,9 +26,9 @@ const Projects = () => {
     },
     {
       title: "OUL Estates",
-      description: "Content creation and community engagement for a virtual real estate project in the metaverse.",
+      description: "An empowerment project for artists, builders, and innovators focusing on sustainable living and creative development.",
       icon: <PenTool className="h-10 w-10 text-crypto-purple" />,
-      tags: ["Content Creation", "Metaverse", "Virtual Real Estate"],
+      tags: ["Artist Empowerment", "Innovation", "Sustainability"],
     },
     {
       title: "Web3 Edutainment",

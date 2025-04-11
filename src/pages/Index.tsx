@@ -9,6 +9,10 @@ import Reviews from "@/components/Reviews";
 import Tweets from "@/components/Tweets";
 import Websites from "@/components/Websites";
 import Projects from "@/components/Projects";
+import Translation from "@/components/Translation";
+import Blogs from "@/components/Blogs";
+import Memes from "@/components/Memes";
+import Interviews from "@/components/Interviews";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
@@ -21,12 +25,16 @@ const Index = () => {
         <Hero />
         <About />
         <Journey />
+        <Projects />
         <Design />
         <Music />
+        <Translation />
+        <Blogs />
+        <Memes />
+        <Interviews />
         <Reviews />
         <Tweets />
         <Websites />
-        <Projects />
         <Contact />
       </main>
       <Footer />
