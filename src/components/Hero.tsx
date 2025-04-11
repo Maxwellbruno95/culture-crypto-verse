@@ -24,7 +24,7 @@ const Hero = () => {
           <Button size="lg" className="bg-crypto-purple hover:bg-crypto-darkpurple">
             View Portfolio
           </Button>
-          <Button size="lg" variant="outline">
+          <Button size="lg" variant="outline" as="a" href="/contact">
             Contact Me
           </Button>
         </div>

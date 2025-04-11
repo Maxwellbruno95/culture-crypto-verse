@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, X, Mail, Twitter, Instagram } from "lucide-react";
+import { MessageSquare, X, Mail, Twitter, Instagram, Facebook } from "lucide-react";
 
 const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,22 +10,27 @@ const FloatingContact = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      url: "mailto:contact@web3educator.com",
+      url: "mailto:maxwellbruno52@gmail.com",
     },
     {
       icon: <Twitter className="h-5 w-5" />,
       label: "Twitter",
-      url: "https://twitter.com/web3educator",
+      url: "https://x.com/maxwellbrunoX",
     },
     {
       icon: <Instagram className="h-5 w-5" />,
       label: "Instagram",
-      url: "https://instagram.com/web3educator",
+      url: "https://www.instagram.com/maxwellbruno.eth/",
+    },
+    {
+      icon: <Facebook className="h-5 w-5" />,
+      label: "Facebook",
+      url: "https://www.facebook.com/maxwellbruno/",
     },
     {
       icon: <MessageSquare className="h-5 w-5" />,
       label: "Telegram",
-      url: "https://t.me/web3educator",
+      url: "https://t.me/maxwellbruno",
     },
   ];
 
