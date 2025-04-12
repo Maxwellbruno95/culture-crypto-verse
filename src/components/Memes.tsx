@@ -3,41 +3,30 @@ import { useState } from "react";
 import SectionContainer from "./SectionContainer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { SmilePlus } from "lucide-react";
 
 const Memes = () => {
   const [selectedMeme, setSelectedMeme] = useState<string | null>(null);
 
   const memes = [
     {
-      title: "When Gas Fees Are Too High",
-      image: "/placeholder.svg",
+      title: "Crypto Market Rollercoaster",
+      image: "/lovable-uploads/773cff69-af07-4b82-a80b-6023a1f91c7b.png",
       category: "Crypto Humor",
     },
     {
-      title: "NFT Market Rollercoaster",
-      image: "/placeholder.svg",
-      category: "NFT Culture",
+      title: "Bitcoin vs Ethereum vs EOS Traffic",
+      image: "/lovable-uploads/fb15336b-ae1b-49b0-b971-8df0ff644822.png",
+      category: "Blockchain Comparison",
     },
     {
-      title: "Web3 Expectations vs Reality",
-      image: "/placeholder.svg",
-      category: "Tech Humor",
-    },
-    {
-      title: "DeFi Yield Farming",
-      image: "/placeholder.svg",
-      category: "DeFi Jokes",
-    },
-    {
-      title: "Blockchain Explained",
-      image: "/placeholder.svg",
-      category: "Educational Humor",
-    },
-    {
-      title: "Crypto Winter Survival Guide",
-      image: "/placeholder.svg",
+      title: "Bitcoin 2017 vs 2018",
+      image: "/lovable-uploads/495a0980-85ce-4f3d-882e-c432f211322f.png",
       category: "Market Humor",
+    },
+    {
+      title: "Crypto Giveth and Taketh",
+      image: "/lovable-uploads/3542b6c5-dbff-4fa3-ac41-49cbbdd41729.png",
+      category: "Investment Humor",
     },
   ];
 
@@ -50,7 +39,7 @@ const Memes = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {memes.map((meme, index) => (
           <Card 
             key={index} 
@@ -59,8 +48,12 @@ const Memes = () => {
           >
             <CardContent className="p-0">
               <div className="relative">
-                <div className="aspect-[4/3] flex items-center justify-center bg-slate-200 dark:bg-slate-800">
-                  <SmilePlus className="h-16 w-16 text-slate-400" />
+                <div className="aspect-video w-full">
+                  <img 
+                    src={meme.image} 
+                    alt={meme.title} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-4 text-white">
                   <span className="text-xs font-medium text-crypto-gold mb-1">{meme.category}</span>
