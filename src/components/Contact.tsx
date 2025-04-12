@@ -10,7 +10,8 @@ import {
   ExternalLink, 
   MessageSquare,
   Linkedin,
-  Facebook
+  Facebook,
+  Disc  // For Farcaster
 } from "lucide-react";
 
 const Contact = () => {
@@ -49,6 +50,16 @@ const Contact = () => {
       platform: "YouTube",
       icon: <Youtube className="h-6 w-6" />,
       url: "https://www.youtube.com/channel/UCHSH81HCDZBL99c6D7zjUfQ",
+    },
+    {
+      platform: "Farcaster",
+      icon: <Disc className="h-6 w-6" />,
+      url: "https://warpcast.com/maxwellbruno",
+    },
+    {
+      platform: "Spotify",
+      icon: <ExternalLink className="h-6 w-6" />,
+      url: "https://open.spotify.com/artist/0J7NLfOmKVJPkw8ZsfuHb7?utm_medium=share&utm_source=linktree#login",
     },
   ];
 
@@ -95,4 +106,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

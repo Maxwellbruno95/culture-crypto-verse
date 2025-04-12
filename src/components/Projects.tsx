@@ -28,7 +28,7 @@ const Projects = () => {
       title: "OUL Estates",
       description: "An empowerment project for artists, builders, and innovators focusing on sustainable living and creative development.",
       icon: <PenTool className="h-10 w-10 text-crypto-purple" />,
-      tags: ["Artist Empowerment", "Innovation", "Sustainability"],
+      tags: ["Artist Empowerment", "Innovation", "Sustainability", "Community Manager"],
     },
     {
       title: "Web3 Edutainment",
