@@ -22,9 +22,15 @@ const Hero = () => {
           artist, builder, and educator.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <Button size="lg" className="bg-crypto-purple hover:bg-crypto-darkpurple">
-            View Portfolio
-          </Button>
+          <a 
+            href="https://humdrum-beluga-31b.notion.site/Maxwell-Bruno-1d3b332ae8e280ac8b2aff6a452d43c0?pvs=4" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="bg-crypto-purple hover:bg-crypto-darkpurple">
+              Resume
+            </Button>
+          </a>
           <Link to="/contact">
             <Button size="lg" variant="outline">
               Contact Me
@@ -43,3 +49,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
