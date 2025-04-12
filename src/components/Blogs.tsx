@@ -3,43 +3,44 @@ import SectionContainer from "./SectionContainer";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const Blogs = () => {
   const articles = [
     {
-      title: "The Evolution of NFTs in African Art",
-      publication: "Crypto Africa",
-      date: "March 2023",
-      url: "#",
-      tags: ["NFTs", "African Art", "Web3"],
+      title: "Introduction to Non Fungible Culture",
+      publication: "Medium",
+      date: "2021",
+      url: "https://maxwellbruno.medium.com/introduction-to-tokenized-cultures-and-non-fungible-culture-9e907530f174",
+      tags: ["NFTs", "Culture", "Web3"],
     },
     {
-      title: "Community Building in Web3: Lessons From Kenya",
-      publication: "Blockchain Daily",
-      date: "January 2023",
-      url: "#",
-      tags: ["Community", "Web3", "Kenya"],
+      title: "TrustED - Academic Credentials Verification On Blockchain",
+      publication: "Steemit",
+      date: "2018",
+      url: "https://steemit.com/education/@maxwell95/trusted-academic-credentials-verification-on-blockchain",
+      tags: ["Education", "Blockchain", "Verification"],
     },
     {
-      title: "Matatu Culture Meets Blockchain Technology",
-      publication: "Tech Nairobi",
-      date: "November 2022",
-      url: "#",
-      tags: ["Culture", "Blockchain", "Matatu"],
+      title: "Bitsong - A Music Streaming Platform Built on the Blockchain",
+      publication: "Steemit",
+      date: "2018",
+      url: "https://steemit.com/blockchain/@maxwell95/bitsong-a-music-streaming-platform-on-the-blockchain",
+      tags: ["Music", "Blockchain", "Streaming"],
     },
     {
-      title: "DeFi Accessibility in Developing Markets",
-      publication: "DeFi Pulse",
-      date: "October 2022",
-      url: "#",
-      tags: ["DeFi", "Accessibility", "Emerging Markets"],
+      title: "Universal Reward Protocol - A New Rewarding System",
+      publication: "Steemit",
+      date: "2018",
+      url: "https://steemit.com/blockchain/@maxwell95/universal-reward-protocol-a-new-rewarding-system",
+      tags: ["Rewards", "Blockchain", "Protocol"],
     },
     {
-      title: "The Future of Cultural Preservation Through Blockchain",
-      publication: "Web3 Culture",
-      date: "July 2022",
-      url: "#",
-      tags: ["Culture", "Preservation", "Web3"],
+      title: "Bounty Hunters - The Next Generation Bounty Platform",
+      publication: "Steemit",
+      date: "2018",
+      url: "https://steemit.com/cryptocurrency/@maxwell95/bounty-hunters-the-next-generation-bounty-plaform",
+      tags: ["Bounty", "Cryptocurrency", "Platform"],
     },
   ];
 
@@ -58,7 +59,11 @@ const Blogs = () => {
             <CardHeader className="pb-2">
               <div className="flex justify-between items-start">
                 <CardTitle className="text-xl">{article.title}</CardTitle>
-                <a href={article.url} className="text-crypto-purple hover:text-crypto-darkpurple" aria-label="External link">
+                <a href={article.url} 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   className="text-crypto-purple hover:text-crypto-darkpurple" 
+                   aria-label="External link">
                   <ExternalLink className="h-5 w-5" />
                 </a>
               </div>

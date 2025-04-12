@@ -2,7 +2,8 @@
 import SectionContainer from "./SectionContainer";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Star, ThumbsUp } from "lucide-react";
+import { Star, ThumbsUp, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Reviews = () => {
   const reviews = [
@@ -14,7 +15,8 @@ const Reviews = () => {
       highlights: [
         "Good underwater resistance and confidence as a daily training tool",
         "Fitness and recreational swimmers as a daily sports device"
-      ]
+      ],
+      url: "https://steemit.com/steemhunt/@maxwell95/ameo-powerbreather-swim-like-a-shark-breath-like-a-runner"
     },
     {
       title: "Roidmi F8 Storm",
@@ -27,7 +29,8 @@ const Reviews = () => {
         "Innovative Magnetic Holder for 2-in-1 Charging and Storing",
         "Capabilities to clean different surfaces",
         "Photosensitive LED Light"
-      ]
+      ],
+      url: "https://peakd.com/steemhunt/@maxwell95/roidmi-f8-storm-lightest-and-most-powerful-cordless-vacuum"
     },
     {
       title: "SteemHunt",
@@ -38,7 +41,8 @@ const Reviews = () => {
         "Simple product rating system",
         "Earn crypto for reviewing new products",
         "Built on the Steem blockchain"
-      ]
+      ],
+      url: "https://steemit.com/steemhunt/@maxwell95/9w6ehy1l"
     }
   ];
 
@@ -109,9 +113,12 @@ const Reviews = () => {
               </ul>
             </CardContent>
             <CardFooter>
-              <div className="text-sm text-muted-foreground">
-                Full review available on request
-              </div>
+              <a href={review.url} target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button variant="outline" className="w-full group">
+                  Read Full Review
+                  <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </CardFooter>
           </Card>
         ))}

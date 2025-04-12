@@ -1,33 +1,38 @@
 
 import SectionContainer from "./SectionContainer";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Languages } from "lucide-react";
+import { Languages, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Translation = () => {
   const translationProjects = [
     {
-      title: "Web3 Educational Content",
-      description: "Translation of blockchain tutorials and educational materials from English to French",
-      client: "Blockchain Academy",
-      year: "2023",
+      title: "Project Milkbox: Proof Of Stake Explained",
+      description: "Translation explaining why it's essential to collect your Milk tokens now",
+      client: "Project Milkbox",
+      year: "2018",
+      url: "https://steemit.com/projectmilkbox/@maxwell95/projet-milkbox-proof-of-stake-pos-expliquee-pourquoi-il-est-essentiel-de-recueillir-vos-jetons-de-lait-maintenant"
     },
     {
-      title: "NFT Project Documentation",
-      description: "Technical documentation and whitepaper translation for NFT marketplace",
-      client: "NFT Collective",
-      year: "2022",
+      title: "Project Milkbox Tweet-Off: #Tokens4Tweets",
+      description: "Translation of Milkbox forums challenge - Share your voice on Twitter for Milk rewards",
+      client: "Project Milkbox",
+      year: "2018",
+      url: "https://steemit.com/projectmilkbox/@maxwell95/projet-milkbox-tweet-off-tokens4tweets-or-defi-des-forums-milkbox-or-partagez-votre-voix-sur-twitter-pour-milk"
     },
     {
-      title: "DeFi Platform Interface",
-      description: "UI/UX localization and translation for decentralized finance application",
-      client: "DeFi Labs",
-      year: "2023",
+      title: "Emotional Experience of Losing a Loved One",
+      description: "Translation of article about emotions predominant when experiencing the loss of a loved one",
+      client: "Project Milkbox",
+      year: "2018",
+      url: "https://steemit.com/projectmilkbox/@maxwell95/quelles-sont-les-emotions-qui-prevalent-dans-l-experience-de-la-disparition-d-un-etre-cher-or-recompenses-milk-a-l-interieur-or"
     },
     {
-      title: "Cryptocurrency Exchange",
-      description: "Website content and user guide translation from English to French",
-      client: "Crypto Exchange",
-      year: "2022",
+      title: "Project Milkbox: InstaPost #Tokens4Pics",
+      description: "Translation of Instagram challenge - Share your smile on Instagram for Milk tokens",
+      client: "Project Milkbox",
+      year: "2018",
+      url: "https://steemit.com/projectmilkbox/@maxwell95/projet-milkbox-instapost-defi-tokens4pics-or-or-partagez-votre-sourire-sur-instagram-et-obtenez-des-milks"
     },
   ];
 
@@ -52,9 +57,17 @@ const Translation = () => {
             <CardContent>
               <p className="text-muted-foreground">{project.description}</p>
             </CardContent>
-            <CardFooter className="text-sm text-muted-foreground flex justify-between">
-              <span>Client: {project.client}</span>
-              <span>{project.year}</span>
+            <CardFooter className="flex flex-col space-y-4">
+              <div className="text-sm text-muted-foreground w-full flex justify-between">
+                <span>Client: {project.client}</span>
+                <span>{project.year}</span>
+              </div>
+              <a href={project.url} target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button variant="outline" className="w-full group">
+                  View Translation
+                  <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </CardFooter>
           </Card>
         ))}
