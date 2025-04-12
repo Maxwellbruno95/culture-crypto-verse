@@ -28,6 +28,16 @@ const Memes = () => {
       image: "/lovable-uploads/3542b6c5-dbff-4fa3-ac41-49cbbdd41729.png",
       category: "Investment Humor",
     },
+    {
+      title: "Crypto's Sweet Technology",
+      image: "/lovable-uploads/5cfb3def-c71d-43da-ab1c-7e3631c1cbeb.png",
+      category: "Investment Reality",
+    },
+    {
+      title: "Blockchain Networks Competition",
+      image: "/lovable-uploads/ce4a9976-c2f6-451f-a8e0-4748c09c4ac3.png",
+      category: "Network Comparison",
+    }
   ];
 
   return (
@@ -35,7 +45,7 @@ const Memes = () => {
       <div className="text-center mb-10">
         <h2 className="section-heading">Meme Gallery</h2>
         <p className="text-lg max-w-3xl mx-auto">
-          Crypto and Web3 educational humor that makes complex concepts accessible and entertaining.
+          Crypto, Blockchain and Web3 humor through meming.
         </p>
       </div>
 
