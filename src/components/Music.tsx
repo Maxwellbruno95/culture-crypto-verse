@@ -2,7 +2,8 @@
 import SectionContainer from "./SectionContainer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Calendar, Music as MusicIcon, PlayCircle, Award } from "lucide-react";
+import { Calendar, Music as MusicIcon, PlayCircle, Award, MapPin, Link as LinkIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Music = () => {
   const musicTracks = [
@@ -32,21 +33,24 @@ const Music = () => {
   const events = [
     {
       name: "African Blockchain Week",
-      date: "October 2023",
+      date: "June 2023",
       location: "Morocco",
-      description: "Performed Web3 educational music and spoke about blockchain's impact on African culture",
+      description: "Composed and created the main soundtrack/ theme song called King Of The Savannah for the event. Spoke about Non Fungible Culture and blockchain's impact on Africa's culture",
+      link: "https://youtu.be/5LhygsI7KK0?si=ZZqIEP1bgXvVj0aE",
     },
     {
       name: "AIBC Summit",
-      date: "2022",
+      date: "May 2021",
       location: "Dubai, UAE",
-      description: "Musical showcase highlighting the intersection of blockchain and traditional culture",
+      description: "Musical and Digital art showcase at my tokenized stand and booth",
+      link: "https://youtu.be/PSenDz2FC2Q?si=HTHRlFdTYFaWKEaY",
     },
     {
       name: "Kenya NFT AI Summit",
-      date: "2023",
-      location: "Virtual Event",
-      description: "Premiered new tracks exploring the relationship between AI, NFTs, and cultural preservation",
+      date: "November 2023",
+      location: "Nairobi, Kenya",
+      description: "Performed my original tracks and talked about using blockchain and NFTs for music",
+      link: "https://youtu.be/Jm2bHJ1dCK8?si=n4NqS_pTYOhOpJdj",
     },
   ];
 
@@ -115,11 +119,24 @@ const Music = () => {
                     <span className="flex items-center">
                       <Calendar className="mr-1 h-4 w-4" /> {event.date}
                     </span>
-                    <span>{event.location}</span>
+                    <span className="flex items-center">
+                      <MapPin className="mr-1 h-4 w-4" /> {event.location}
+                    </span>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription>{event.description}</CardDescription>
+                  <CardDescription className="mb-4">{event.description}</CardDescription>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    className="mt-2"
+                    asChild
+                  >
+                    <a href={event.link} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      <PlayCircle className="mr-2 h-4 w-4" /> 
+                      Watch Video
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             ))}
