@@ -7,17 +7,26 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   // Initialize EmailJS when the component mounts
   useEffect(() => {
-    // Load EmailJS script if not already loaded
-    if (!(window as any).emailjs) {
-      const script = document.createElement("script");
-      script.src = "https://cdn.emailjs.com/sdk/2.3.2/email.min.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
+    // Initialize EmailJS directly
+    const initEmailJs = async () => {
+      if (typeof window !== "undefined" && !(window as any).emailjs?.initialized) {
+        try {
+          await import("emailjs-com").then((emailjsModule) => {
+            emailjsModule.init("JgjR_Q1xberRW1o9N");
+            (window as any).emailjs = { initialized: true };
+          });
+        } catch (error) {
+          console.error("Failed to initialize EmailJS:", error);
+        }
+      }
+    };
+    
+    initEmailJs();
   }, []);
 
   return (

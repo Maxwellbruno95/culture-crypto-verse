@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -17,9 +18,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import emailjs from "emailjs-com";
 
-const EMAILJS_SERVICE_ID = "service_144miwj";
+// Updated EmailJS credentials
+const EMAILJS_SERVICE_ID = "service_vi2bq5w";  // Updated service ID
 const EMAILJS_TEMPLATE_ID = "template_l2xs8ma";
-const EMAILJS_USER_ID = "Vds3Ndrno0FpBZfz5";
+const EMAILJS_USER_ID = "JgjR_Q1xberRW1o9N";  // Updated user ID
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -51,6 +53,12 @@ const ContactForm = () => {
         subject: data.subject,
         message: data.message,
       };
+      
+      // Initialize EmailJS if not already initialized
+      if (typeof emailjs.init === 'function' && !(window as any).emailjs.initialized) {
+        emailjs.init(EMAILJS_USER_ID);
+        (window as any).emailjs.initialized = true;
+      }
       
       const response = await emailjs.send(
         EMAILJS_SERVICE_ID,
