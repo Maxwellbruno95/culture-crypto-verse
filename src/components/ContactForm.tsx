@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -16,6 +15,11 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
+
+const EMAILJS_SERVICE_ID = "service_144miwj";
+const EMAILJS_TEMPLATE_ID = "template_l2xs8ma";
+const EMAILJS_USER_ID = "Vds3Ndrno0FpBZfz5";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -41,23 +45,35 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // In a real application, you would send this data to your server
-      console.log("Form data:", data);
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message,
+      };
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
-      });
-      
-      form.reset();
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
+
+      if (response.status === 200) {
+        toast({
+          title: "Message sent successfully!",
+          description: "I'll get back to you as soon as possible.",
+        });
+        
+        form.reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
         title: "Failed to send message",
-        description: "Please try again later.",
+        description: "Please try again later or contact me directly via email.",
         variant: "destructive",
       });
     } finally {

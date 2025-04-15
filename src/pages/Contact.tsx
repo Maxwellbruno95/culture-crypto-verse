@@ -6,8 +6,20 @@ import FloatingContact from "@/components/FloatingContact";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Contact = () => {
+  // Initialize EmailJS when the component mounts
+  useEffect(() => {
+    // Load EmailJS script if not already loaded
+    if (!(window as any).emailjs) {
+      const script = document.createElement("script");
+      script.src = "https://cdn.emailjs.com/sdk/2.3.2/email.min.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar />
