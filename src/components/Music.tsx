@@ -33,18 +33,18 @@ const Music = () => {
     {
       name: "African Blockchain Week",
       date: "October 2023",
-      location: "Lagos, Nigeria",
+      location: "Morocco",
       description: "Performed Web3 educational music and spoke about blockchain's impact on African culture",
     },
     {
       name: "AIBC Summit",
-      date: "May 2023",
+      date: "2022",
       location: "Dubai, UAE",
       description: "Musical showcase highlighting the intersection of blockchain and traditional culture",
     },
     {
-      name: "NFT AI Summit",
-      date: "February 2023",
+      name: "Kenya NFT AI Summit",
+      date: "2023",
       location: "Virtual Event",
       description: "Premiered new tracks exploring the relationship between AI, NFTs, and cultural preservation",
     },
