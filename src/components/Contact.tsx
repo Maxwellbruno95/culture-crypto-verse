@@ -1,4 +1,3 @@
-
 import SectionContainer from "./SectionContainer";
 import { Button } from "@/components/ui/button";
 import { 
@@ -11,7 +10,10 @@ import {
   MessageSquare,
   Linkedin,
   Facebook,
-  Disc  // For Farcaster
+  Disc,  // For Farcaster
+  Music,  // For SoundXYZ
+  Server,  // For Discord
+  ShoppingBag  // For OpenSea
 } from "lucide-react";
 
 const Contact = () => {
@@ -60,6 +62,21 @@ const Contact = () => {
       platform: "Spotify",
       icon: <ExternalLink className="h-6 w-6" />,
       url: "https://open.spotify.com/artist/0J7NLfOmKVJPkw8ZsfuHb7?utm_medium=share&utm_source=linktree#login",
+    },
+    {
+      platform: "Discord",
+      icon: <Server className="h-6 w-6" />,
+      url: "https://discordapp.com/users/maxwellbruno",
+    },
+    {
+      platform: "SoundXYZ",
+      icon: <Music className="h-6 w-6" />,
+      url: "https://www.sound.xyz/maxwellbruno/releases",
+    },
+    {
+      platform: "OpenSea",
+      icon: <ShoppingBag className="h-6 w-6" />,
+      url: "https://opensea.io/0x7fFA58d9E54961d9261bBc559493155219C6a19b",
     },
   ];
 
