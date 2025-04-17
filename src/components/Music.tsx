@@ -1,4 +1,3 @@
-
 import SectionContainer from "./SectionContainer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,17 +15,17 @@ const Music = () => {
     },
     {
       title: "Unstoppable",
-      description: "The resilience and unstoppable nature of blockchain technology",
+      description: "Exploring the potential of web3 domains and digital identity in the decentralized web",
       embedUrl: "https://www.youtube.com/embed/ilc9LrYVOrI",
       coverImage: "/lovable-uploads/e92008f7-7764-432d-bc41-3840a434ee20.png",
       year: "2022",
     },
     {
       title: "SNUSCOIN",
-      description: "Exploring digital currencies and their potential impact on global economics",
+      description: "A satirical exploration of meme culture and cryptocurrency trends in 2024",
       embedUrl: "https://www.youtube.com/embed/CRU3uUu3tXA",
       coverImage: "/lovable-uploads/c5aac969-1e7c-4f62-b566-3321858c4c43.png",
-      year: "2021",
+      year: "2024",
     },
   ];
 

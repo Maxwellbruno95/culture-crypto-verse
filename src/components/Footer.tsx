@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <span className="text-xl font-bold bg-gradient-to-r from-crypto-purple to-crypto-blue bg-clip-text text-transparent">
-              Maxwell Bruno Portfolio
+              Maxwell Bruno
             </span>
             <p className="text-sm text-slate-400 mt-1">
               Blockchain Culture & Community
