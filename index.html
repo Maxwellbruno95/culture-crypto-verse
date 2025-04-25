@@ -16,6 +16,13 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Explicitly set public URL base for assets -->
+    <script>
+      // This helps ensure paths are resolved correctly regardless of hosting environment
+      window.publicBasePath = window.location.pathname.endsWith('/') 
+        ? window.location.pathname 
+        : window.location.pathname + '/';
+    </script>
   </head>
 
   <body>
