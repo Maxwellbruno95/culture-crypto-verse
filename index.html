@@ -19,9 +19,12 @@
     <!-- Explicitly set public URL base for assets -->
     <script>
       // This helps ensure paths are resolved correctly regardless of hosting environment
-      window.publicBasePath = window.location.pathname.endsWith('/') 
-        ? window.location.pathname 
-        : window.location.pathname + '/';
+      window.publicBasePath = '/';
+      // Debug loading issues
+      console.log("Document loading started...");
+      window.addEventListener('DOMContentLoaded', () => {
+        console.log("DOM content fully loaded and parsed");
+      });
     </script>
   </head>
 
