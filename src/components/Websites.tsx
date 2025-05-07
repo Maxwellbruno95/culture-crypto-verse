@@ -7,6 +7,20 @@ import { Globe, ExternalLink } from "lucide-react";
 const Websites = () => {
   const websites = [
     {
+      title: "BloQubits",
+      description: "A platform to discover Blockchain projects focused on Quantum computing and quantum tech.",
+      image: "/lovable-uploads/4d162030-ff3e-475a-b6b2-16d384cb33b4.png",
+      url: "https://bloqubits.com",
+      status: "Live",
+    },
+    {
+      title: "SuperchainAI",
+      description: "A project to discover AI projects built on the Superchain ecosystem.",
+      image: "/lovable-uploads/58133cfa-786e-4b33-9bdb-f122ef3c4266.png",
+      url: "https://superchainai.com",
+      status: "Live",
+    },
+    {
       title: "MA-3.fun",
       description: "A platform celebrating Kenyan Matatu culture through NFTs and blockchain technology.",
       image: "/lovable-uploads/da36598e-34de-43ff-9a4c-7964a8dd1a63.png",
