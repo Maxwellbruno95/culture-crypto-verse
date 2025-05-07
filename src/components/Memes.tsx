@@ -2,10 +2,12 @@
 import { useState } from "react";
 import SectionContainer from "./SectionContainer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Maximize } from "lucide-react";
 
 const Memes = () => {
-  const [selectedMeme, setSelectedMeme] = useState<string | null>(null);
+  const [selectedMeme, setSelectedMeme] = useState<{image: string, title: string} | null>(null);
 
   const memes = [
     {
@@ -54,7 +56,7 @@ const Memes = () => {
           <Card 
             key={index} 
             className="overflow-hidden card-hover cursor-pointer"
-            onClick={() => setSelectedMeme(meme.image)}
+            onClick={() => setSelectedMeme({image: meme.image, title: meme.title})}
           >
             <CardContent className="p-0">
               <div className="relative">
@@ -68,6 +70,9 @@ const Memes = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-4 text-white">
                   <span className="text-xs font-medium text-crypto-gold mb-1">{meme.category}</span>
                   <h3 className="text-lg font-bold">{meme.title}</h3>
+                  <div className="absolute top-2 right-2 bg-black/30 rounded-full p-1">
+                    <Maximize className="h-4 w-4 text-white" />
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -76,13 +81,19 @@ const Memes = () => {
       </div>
 
       <Dialog open={!!selectedMeme} onOpenChange={() => setSelectedMeme(null)}>
-        <DialogContent className="max-w-3xl p-0 overflow-hidden">
+        <DialogContent className="max-w-4xl p-0 overflow-hidden">
+          <DialogTitle className="sr-only">
+            {selectedMeme?.title || "Meme view"}
+          </DialogTitle>
           {selectedMeme && (
-            <img 
-              src={selectedMeme} 
-              alt="Meme full view" 
-              className="w-full h-auto"
-            />
+            <div className="max-h-[80vh] overflow-auto p-1">
+              <img 
+                src={selectedMeme.image} 
+                alt={selectedMeme.title} 
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
           )}
         </DialogContent>
       </Dialog>
